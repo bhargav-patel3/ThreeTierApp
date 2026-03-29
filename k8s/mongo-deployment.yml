@@ -7,12 +7,10 @@ spec:
   selector:
     matchLabels:
       app: mongodb
-  namespace: three-tier
   template:
     metadata:
       labels:
         app: mongodb
-    namespace: three-tier
     spec:
       containers:
       - name: mongodb
@@ -42,5 +40,4 @@ spec:
             mountPath: /data/db
       volumes: 
       - name: mongo-volume
-        persistentVolumeClaim:
-          claimName: mongo-volume-claim
+        emptyDir: {}

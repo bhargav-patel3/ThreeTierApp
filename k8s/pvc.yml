@@ -4,11 +4,8 @@ metadata:
   name: mongo-volume-claim
   namespace: three-tier
 spec:
-  storageClassName: slow
-  resources:
-    requests:
-      storage: 1 Gi
-  volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
-    
+  resources:
+    requests:
+      storage: 5Gi

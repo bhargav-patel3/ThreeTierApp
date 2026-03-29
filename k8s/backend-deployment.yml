@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: bunny9988/todo-backend:latest
+          image: bunny9988/three-tier-backend:2.0
           imagePullPolicy: Always
           ports:
             - containerPort: 3500

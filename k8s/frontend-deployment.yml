@@ -15,16 +15,16 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: bunny9988/todo-frontend:latest
+          image: bunny9988/three-tier-frontend:2.0
           ports:
-            - containerPort: 80
+            - containerPort: 3000
           env:
             - name: REACT_APP_BACKEND_URL
-              value: "http://backend-svc:3500/api/tasks"
+              value: "/api/tasks"
           resources:
             requests:
-              memory: "64Mi"
+              memory: "512Mi"
               cpu: "250m"
             limits:
-              memory: "128Mi"
+              memory: "1Gi"
               cpu: "500m"
